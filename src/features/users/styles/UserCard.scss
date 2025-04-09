@@ -1,0 +1,54 @@
+@use 'variables' as *;
+
+.user-card {
+  border: 1px solid #ddd;
+  border-radius: $border-radius;
+  padding: $padding-medium;
+  margin-bottom: 20px;
+  background-color: $background-color;
+  transition: transform $transition-duration ease, box-shadow $transition-duration ease;
+  max-width: $max-width-card;
+  height: 650px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: $box-shadow;
+  }
+
+  h2 {
+    font-size: $font-size-large;
+    color: #333;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: $font-size-medium;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    max-width: $max-width-text;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background-color: $secondary-color;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color $transition-duration ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: $hover-color;
+      transform: scale(1.05);
+    }
+  }
+}

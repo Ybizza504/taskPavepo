@@ -1,0 +1,24 @@
+@use 'variables' as *;
+
+.filter-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap-medium;
+  margin-bottom: 1.5rem;
+
+  .filter-input {
+    padding: $padding-small;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    font-size: $font-size-medium;
+    flex: 1;
+    min-width: $min-width-input;
+    transition: border-color 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+    }
+  }
+}
